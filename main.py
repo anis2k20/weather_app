@@ -24,7 +24,7 @@ def check_weather():
     is_cloud = data["current"]["cloud"]
     humidity = data["current"]["humidity"]
     weather_report = f"Country: {country}\nTime: {time}\nTemperature: {temp}°C\nCondition: {condition}\nHumidity: {humidity}"
-    output.config(text=weather_report, font=("Arial",14,"normal"),bg=PINK,padx=5,pady=5)
+    output.config(text=weather_report, font=("Arial",14,"normal"),bg=PINK,padx=10,pady=5)
 
 
 window = Tk()
@@ -51,9 +51,9 @@ btn.grid(column=1,row=3,pady=10)
 weather_label = Label(text="The weather is: ",font=("Arial", 15, "bold"))
 weather_label.grid(column=1,row=4)
 
-result=Canvas(width=200, height=100,bg=PINK)
+result=Canvas(width=220, height=100,bg=PINK)
 result.grid(column=1,row=5,padx=10,pady=10)
-output=Label(text="")
+output=Label(text="",bg=PINK)
 output.grid(column=1,row=5)
 
 
